@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "agrinet"
+version = "0.1.0"
+description = ""
+authors = ["Max <avdeenkomaxim123@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+jupyter = "^1.1.1"
+numpy = "^2.1.2"
+pandas = "^2.2.3"
+matplotlib = "^3.9.2"
+seaborn = "^0.13.2"
+scikit-learn = "^1.5.2"
+scipy = "^1.14.1"
+torch = {version = "^2.5.1+cpu", source = "pytorch_cpu"}
+torchvision = {version = "^0.20.1+cpu", source = "pytorch_cpu"}
+
+
+[[tool.poetry.source]]
+name = "pytorch_cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
