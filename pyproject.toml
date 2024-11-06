@@ -8,7 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 jupyter = "^1.1.1"
-numpy = "^2.1.2"
+numpy = "2"
 pandas = "^2.2.3"
 matplotlib = "^3.9.2"
 seaborn = "^0.13.2"
@@ -20,6 +20,7 @@ tqdm = "^4.66.6"
 tensorboard = "^2.18.0"
 albumentations = "^1.4.20"
 opencv-python = "^4.10.0.84"
+numba = "^0.60.0"
 
 
 [[tool.poetry.source]]
