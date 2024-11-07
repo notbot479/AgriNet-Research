@@ -18,7 +18,7 @@ torch = {version = "^2.5.1+cpu", source = "pytorch_cpu"}
 torchvision = {version = "^0.20.1+cpu", source = "pytorch_cpu"}
 tqdm = "^4.66.6"
 tensorboard = "^2.18.0"
-albumentations = "^1.4.20"
+albumentations = "1.4.21"
 opencv-python = "^4.10.0.84"
 numba = "^0.60.0"
 
