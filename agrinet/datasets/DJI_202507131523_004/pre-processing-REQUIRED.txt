@@ -1,0 +1,2 @@
+1. Read agriculture vision article
+2. Find pre-processing steps for rgb + nir images
