@@ -1,3 +1,4 @@
+**/*.pth
 .~lock*
 **/_*dataset*/
 **/_output/
