@@ -14,8 +14,6 @@ matplotlib = "^3.9.2"
 seaborn = "^0.13.2"
 scikit-learn = "^1.5.2"
 scipy = "^1.14.1"
-torch = {version = "^2.5.1+cpu", source = "pytorch_cpu"}
-torchvision = {version = "^0.20.1+cpu", source = "pytorch_cpu"}
 tqdm = "^4.66.6"
 tensorboard = "^2.18.0"
 albumentations = "1.4.21"
@@ -23,12 +21,30 @@ opencv-python = "^4.10.0.84"
 numba = "^0.60.0"
 segmentation-models-pytorch = "^0.5.0"
 
+# -------------------------------------------------------------------
+# 🔥 GPU MODE — PyTorch with CUDA 12.4 (for RTX 40xx)
+torch = {version = "2.5.1", source = "pytorch_cuda"}
+torchvision = {version = "0.20.1", source = "pytorch_cuda"}
 
+# -------------------------------------------------------------------
+# 🧊 CPU MODE — PyTorch CPU-only wheels
+# Comment-out GPU above and uncomment these two lines for CPU mode:
+# torch = {version = "2.5.1+cpu", source = "pytorch_cpu"}
+# torchvision = {version = "0.20.1+cpu", source = "pytorch_cpu"}
+
+# -------------------------------------------------------------------
+
+# CUDA 12.4 wheel source (ONLY for GPU mode)
 [[tool.poetry.source]]
-name = "pytorch_cpu"
-url = "https://download.pytorch.org/whl/cpu"
+name = "pytorch_cuda"
+url = "https://download.pytorch.org/whl/cu124"
 priority = "explicit"
 
+# CPU wheel source (ONLY for CPU mode)
+# [[tool.poetry.source]]
+# name = "pytorch_cpu"
+# url = "https://download.pytorch.org/whl/cpu"
+# priority = "explicit"
 
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "^24.10.0"}
