@@ -1,5 +1,6 @@
 **/*.pth
 .~lock*
+**/_predictions*/
 **/_*dataset*/
 **/_output/
 
