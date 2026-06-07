@@ -36,6 +36,8 @@ torchvision = {version = "0.20.1", source = "pytorch_cuda"}
 
 # CUDA 12.4 wheel source (ONLY for GPU mode)
 scikit-image = "^0.26.0"
+python-telegram-bot = "^22.7"
+python-dotenv = "^1.2.2"
 [[tool.poetry.source]]
 name = "pytorch_cuda"
 url = "https://download.pytorch.org/whl/cu124"
