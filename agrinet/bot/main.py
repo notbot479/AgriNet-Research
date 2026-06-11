@@ -104,7 +104,7 @@ logger = logging.getLogger(__name__)
 
 
 # ============================================================
-# Model Manager — Multi-model support
+# Model Manager - Multi-model support
 # ============================================================
 
 
@@ -306,9 +306,9 @@ class Locale:
                 "1️⃣ Send an RGB image (regular photo)\n"
                 "2️⃣ Then send the corresponding NIR (Near-Infrared) image\n\n"
                 "The bot will return:\n"
-                "• NDVI visualization\n"
-                "• Prediction overlay with detected anomalies\n"
-                "• List of detected classes with pixel counts\n\n"
+                "- NDVI visualization\n"
+                "- Prediction overlay with detected anomalies\n"
+                "- List of detected classes with pixel counts\n\n"
                 "Send /analyze to start analysis or just send your RGB image!"
             ),
             "send_rgb": (
@@ -326,14 +326,14 @@ class Locale:
             "rgb_not_found": "❌ RGB image not found. Please start over with /analyze",
             "ndvi_caption": "🗺️ NDVI Visualization",
             "ndvi_stats_title": "📊 *NDVI Statistics:*\n",
-            "ndvi_min": "  • Min: `{value}`\n",
-            "ndvi_max": "  • Max: `{value}`\n",
-            "ndvi_mean": "  • Mean: `{value}`\n",
+            "ndvi_min": "  - Min: `{value}`\n",
+            "ndvi_max": "  - Max: `{value}`\n",
+            "ndvi_mean": "  - Mean: `{value}`\n",
             "veg_health_title": "\n🌿 *Vegetation Health:*\n",
-            "veg_healthy": "  • Healthy (NDVI > 0.3): `{value}%`\n",
-            "veg_sparse": "  • Sparse (0.1–0.3): `{value}%`\n",
-            "veg_nonveg": "  • Non-vegetation (≤ 0.1): `{value}%`",
-            "prediction_caption": "🔍 Prediction Overlay — model: {model}",
+            "veg_healthy": "  - Healthy (NDVI > 0.3): `{value}%`\n",
+            "veg_sparse": "  - Sparse (0.1–0.3): `{value}%`\n",
+            "veg_nonveg": "  - Non-vegetation (≤ 0.1): `{value}%`",
+            "prediction_caption": "🔍 Prediction Overlay - model: {model}",
             "no_anomalies": "✅ No anomalies detected at threshold `{threshold}`.",
             "detected_title": "🔍 *Detected Anomalies:*\n\n",
             "detected_item": (
@@ -342,7 +342,7 @@ class Locale:
                 "      📊 Pixels: `{pixels}` ({percent}%)\n\n"
             ),
             "legend_header": "\n📋 *Color Legend:*\n",
-            "legend_item": "  {emoji} `{hex}` — {name}\n",
+            "legend_item": "  {emoji} `{hex}` - {name}\n",
             "analysis_complete": "✅ *Analysis Complete!*\n\n",
             "input_size": "📐 Input: {orig_w}×{orig_h} → {target_w}×{target_h}\n",
             "threshold_info": "🎯 Threshold: `{threshold}`\n",
@@ -353,16 +353,16 @@ class Locale:
             "help_title": "🛰️ *Agricultural Anomaly Detection Bot*\n\n",
             "help_commands": (
                 "*Commands:*\n"
-                "/start — Welcome message and instructions\n"
-                "/analyze — Start new image analysis\n"
-                "/skip\\_nir — Use grayscale as synthetic NIR\n"
-                "/model — Show/switch model backbone\n"
-                "/threshold — Show/set prediction threshold\n"
-                "/strategy — Show/set normalization strategy\n"
-                "/classes — Show all detectable classes\n"
-                "/lang — Switch language (EN/RU)\n"
-                "/help — This help message\n"
-                "/cancel — Cancel current operation\n\n"
+                "/start - Welcome message and instructions\n"
+                "/analyze - Start new image analysis\n"
+                "/skip\\_nir - Use grayscale as synthetic NIR\n"
+                "/model - Show/switch model backbone\n"
+                "/threshold - Show/set prediction threshold\n"
+                "/strategy - Show/set normalization strategy\n"
+                "/classes - Show all detectable classes\n"
+                "/lang - Switch language (EN/RU)\n"
+                "/help - This help message\n"
+                "/cancel - Cancel current operation\n\n"
             ),
             "help_workflow": (
                 "*Workflow:*\n"
@@ -385,9 +385,9 @@ class Locale:
             "strategy_current": (
                 "🔧 Current strategy: `{strategy}`\n\n"
                 "*Available strategies:*\n"
-                "  • `simple` — divide by 255 only (no adaptation)\n"
-                "  • `zscore` — linear mean/std alignment (recommended for KZ)\n"
-                "  • `histogram` — full distribution matching to training data\n\n"
+                "  - `simple` - divide by 255 only (no adaptation)\n"
+                "  - `zscore` - linear mean/std alignment (recommended for KZ)\n"
+                "  - `histogram` - full distribution matching to training data\n\n"
                 "Usage: `/strategy zscore`"
             ),
             "strategy_updated": "✅ Strategy updated to `{strategy}`",
@@ -411,7 +411,7 @@ class Locale:
             "skip_nir_no_rgb": "❌ No RGB image found. Send RGB image first.",
             "cancelled": "❌ Operation cancelled. Send /analyze to start over.",
             "lang_switched": "🌐 Language set to *English*.",
-            "lang_prompt": "🌐 Choose language / Выберите язык:\n/lang\\_en — English\n/lang\\_ru — Русский",
+            "lang_prompt": "🌐 Choose language / Выберите язык:\n/lang\\_en - English\n/lang\\_ru - Русский",
             "error_generic": "❌ An unexpected error occurred. Please try again with /analyze",
             "error_processing": "❌ Error processing image: {error}\nPlease try again.",
             "error_analysis": "❌ Analysis failed: {error}\nPlease try again with /analyze",
@@ -429,9 +429,9 @@ class Locale:
                 "1️⃣ Отправьте RGB-снимок (обычное цветное фото)\n"
                 "2️⃣ Затем отправьте соответствующий NIR-снимок (ближний инфракрасный)\n\n"
                 "Бот вернёт:\n"
-                "• Визуализацию NDVI\n"
-                "• Наложение предсказания с обнаруженными аномалиями\n"
-                "• Список обнаруженных классов с пикселями\n\n"
+                "- Визуализацию NDVI\n"
+                "- Наложение предсказания с обнаруженными аномалиями\n"
+                "- Список обнаруженных классов с пикселями\n\n"
                 "Отправьте /analyze для начала анализа или просто отправьте RGB-снимок!"
             ),
             "send_rgb": (
@@ -449,14 +449,14 @@ class Locale:
             "rgb_not_found": "❌ RGB-снимок не найден. Начните заново с /analyze",
             "ndvi_caption": "🗺️ Визуализация NDVI",
             "ndvi_stats_title": "📊 *Статистика NDVI:*\n",
-            "ndvi_min": "  • Мин: `{value}`\n",
-            "ndvi_max": "  • Макс: `{value}`\n",
-            "ndvi_mean": "  • Среднее: `{value}`\n",
+            "ndvi_min": "  - Мин: `{value}`\n",
+            "ndvi_max": "  - Макс: `{value}`\n",
+            "ndvi_mean": "  - Среднее: `{value}`\n",
             "veg_health_title": "\n🌿 *Здоровье растительности:*\n",
-            "veg_healthy": "  • Здоровая (NDVI > 0.3): `{value}%`\n",
-            "veg_sparse": "  • Разреженная (0.1–0.3): `{value}%`\n",
-            "veg_nonveg": "  • Без растительности (≤ 0.1): `{value}%`",
-            "prediction_caption": "🔍 Предсказание — модель: {model}",
+            "veg_healthy": "  - Здоровая (NDVI > 0.3): `{value}%`\n",
+            "veg_sparse": "  - Разреженная (0.1–0.3): `{value}%`\n",
+            "veg_nonveg": "  - Без растительности (≤ 0.1): `{value}%`",
+            "prediction_caption": "🔍 Предсказание - модель: {model}",
             "no_anomalies": "✅ Аномалий не обнаружено при пороге `{threshold}`.",
             "detected_title": "🔍 *Обнаруженные аномалии:*\n\n",
             "detected_item": (
@@ -465,7 +465,7 @@ class Locale:
                 "      📊 Пикселей: `{pixels}` ({percent}%)\n\n"
             ),
             "legend_header": "\n📋 *Цветовая легенда:*\n",
-            "legend_item": "  {emoji} `{hex}` — {name}\n",
+            "legend_item": "  {emoji} `{hex}` - {name}\n",
             "analysis_complete": "✅ *Анализ завершён!*\n\n",
             "input_size": "📐 Вход: {orig_w}×{orig_h} → {target_w}×{target_h}\n",
             "threshold_info": "🎯 Порог: `{threshold}`\n",
@@ -476,16 +476,16 @@ class Locale:
             "help_title": "🛰️ *Бот обнаружения аномалий в сельском хозяйстве*\n\n",
             "help_commands": (
                 "*Команды:*\n"
-                "/start — Приветствие и инструкции\n"
-                "/analyze — Начать новый анализ\n"
-                "/skip\\_nir — Использовать градации серого как NIR\n"
-                "/model — Показать/сменить модель\n"
-                "/threshold — Показать/установить порог\n"
-                "/strategy — Показать/установить стратегию нормализации\n"
-                "/classes — Показать все обнаруживаемые классы\n"
-                "/lang — Переключить язык (EN/RU)\n"
-                "/help — Это сообщение помощи\n"
-                "/cancel — Отменить текущую операцию\n\n"
+                "/start - Приветствие и инструкции\n"
+                "/analyze - Начать новый анализ\n"
+                "/skip\\_nir - Использовать градации серого как NIR\n"
+                "/model - Показать/сменить модель\n"
+                "/threshold - Показать/установить порог\n"
+                "/strategy - Показать/установить стратегию нормализации\n"
+                "/classes - Показать все обнаруживаемые классы\n"
+                "/lang - Переключить язык (EN/RU)\n"
+                "/help - Это сообщение помощи\n"
+                "/cancel - Отменить текущую операцию\n\n"
             ),
             "help_workflow": (
                 "*Порядок работы:*\n"
@@ -508,9 +508,9 @@ class Locale:
             "strategy_current": (
                 "🔧 Текущая стратегия: `{strategy}`\n\n"
                 "*Доступные стратегии:*\n"
-                "  • `simple` — только деление на 255 (без адаптации)\n"
-                "  • `zscore` — линейное выравнивание mean/std (рекомендуется для KZ)\n"
-                "  • `histogram` — полное совмещение распределений\n\n"
+                "  - `simple` - только деление на 255 (без адаптации)\n"
+                "  - `zscore` - линейное выравнивание mean/std (рекомендуется для KZ)\n"
+                "  - `histogram` - полное совмещение распределений\n\n"
                 "Использование: `/strategy zscore`"
             ),
             "strategy_updated": "✅ Стратегия обновлена: `{strategy}`",
@@ -534,7 +534,7 @@ class Locale:
             "skip_nir_no_rgb": "❌ RGB-снимок не найден. Сначала отправьте RGB-снимок.",
             "cancelled": "❌ Операция отменена. Отправьте /analyze для начала.",
             "lang_switched": "🌐 Язык установлен: *Русский*.",
-            "lang_prompt": "🌐 Choose language / Выберите язык:\n/lang\\_en — English\n/lang\\_ru — Русский",
+            "lang_prompt": "🌐 Choose language / Выберите язык:\n/lang\\_en - English\n/lang\\_ru - Русский",
             "error_generic": "❌ Произошла ошибка. Попробуйте снова с /analyze",
             "error_processing": "❌ Ошибка обработки: {error}\nПопробуйте снова.",
             "error_analysis": "❌ Анализ не удался: {error}\nПопробуйте снова с /analyze",
@@ -861,7 +861,7 @@ def _get_class_emoji(class_name: str) -> str:
         "planter_skip": "⏭️",
         "weed_cluster": "🌿",
     }
-    return emoji_map.get(class_name, "•")
+    return emoji_map.get(class_name, "-")
 
 
 def _color_to_hex(color: tuple) -> str:
@@ -913,7 +913,7 @@ def _build_model_list(active_name: str) -> str:
     for name in model_manager.available_models:
         info = model_manager.get_model_info(name)
         marker = " ← ✓" if name == active_name else ""
-        lines.append(f"  • `{name}` — mIoU: `{info['best_miou']:.4f}`{marker}")
+        lines.append(f"  - `{name}` - mIoU: `{info['best_miou']:.4f}`{marker}")
     return "\n".join(lines)
 
 
@@ -979,7 +979,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         emoji = _get_class_emoji(label)
         color_hex = _color_to_hex(color)
         class_name = Locale.get_class_name(label, update, context)
-        text += f"  {emoji} {class_name} — `{color_hex}`\n"
+        text += f"  {emoji} {class_name} - `{color_hex}`\n"
 
     text += t("how_to_use")
 
@@ -1233,7 +1233,7 @@ async def classes_command(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         emoji = _get_class_emoji(label)
         color_hex = _color_to_hex(color)
         translated_name = Locale.get_class_name(label, update, context)
-        text += f"  {emoji} `{color_hex}` — {translated_name}\n"
+        text += f"  {emoji} `{color_hex}` - {translated_name}\n"
     await update.message.reply_text(text, parse_mode="Markdown")
 
 
@@ -1286,7 +1286,7 @@ async def strategy_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 
 
 async def model_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Handle /model command — list available models or switch."""
+    """Handle /model command - list available models or switch."""
     t = lambda key, **kw: Locale.t(key, update, context, **kw)
 
     current = _get_user_model(context)
